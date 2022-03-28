@@ -6,11 +6,23 @@ You may assume that each input would have exactly one solution, and you may not 
 You can return the answer in any order.
 '''
 
+'''
+GIVEN : list of integers and a target integer
+OUTPUT : list containing two indices whose sum equals the given target number
+
+* example *
+Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+'''
+
 class Solution(object):
     def twoSum(self, nums, target):
         """
+        —given—
         :type nums: List[int]
         :type target: int
+
+        —returned—
         :rtype: List[int]
         """
         

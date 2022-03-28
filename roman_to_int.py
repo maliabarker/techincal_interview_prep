@@ -15,12 +15,25 @@ C can be placed before D (500) and M (1000) to make 400 and 900.
 Given a roman numeral, convert it to an integer.
 '''
 
+'''
+GIVEN : string of roman numerals
+OUTPUT : integer value of the given roman numeral string
+
+* example *
+Input: s = "III"
+Output: 3
+'''
+
 class Solution(object):
     def romanToInt(self, s):
         """
+        —given—
         :type s: str
+
+        —returned—
         :rtype: int
         """
+        
         # Instantiate a numerical value to add or subtract to
         # This will also be the value that is returned
         num_val = 0
