@@ -67,17 +67,27 @@ class Solution:
     ################SOLUTION THAT WORKS FOR ALL CASES#######################
     def isValid2(self, s):
         parentheses = {'(':')', '{':'}','[':']'}
+        # instantiate empty list
         stack = []
+        # iterate through characters in the string
         for char in s:
-            if char in parentheses:  # 1
+            # if the character is in the dictionary keys (aka a left bracket) append it to the list
+            if char in parentheses.keys():  # 1
                 stack.append(char)
+            # else check if the list is empty (meaning it is the right bracket since those are not added to list)
+            # OR
+            # if the value of the charcacter in the list is not the matching right bracket
+            # this will also remove the charcter from the list and start fresh for the next iteration
+            # return false
             elif len(stack) == 0 or parentheses[stack.pop()] != char:  # 2
                 return False
+        # if all conditions are met and there are no characters left in the stack (meaning there were matches found for each bracket)
+        # this statement will return true
         return len(stack) == 0 # 3
      
 
 
 if __name__ == '__main__':
     test_obj = Solution()
-    test_method = test_obj.isValid2("()[{]}")
+    test_method = test_obj.isValid2("()[]{}")
     print(test_method)
