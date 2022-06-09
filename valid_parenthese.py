@@ -75,7 +75,7 @@ class Solution:
             if char in parentheses.keys():  # 1
                 stack.append(char)
             # else check if the list is empty (meaning it is the right bracket since those are not added to list)
-            # OR
+            # OR (([]))[
             # if the value of the charcacter in the list is not the matching right bracket
             # this will also remove the charcter from the list and start fresh for the next iteration
             # return false
